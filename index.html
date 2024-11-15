@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Happy International Men's Day</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Varela+Round&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- Nút bấm để hiện lời nhắn -->
+            <button id="showMessageButton" onclick="showMessage()" class="message-button">Bấm để xem lời nhắn</button>
+
+            <!-- Phần nhạc -->
+            <audio id="player" autoplay loop>
+                <source src="./music.mp3" type="audio/mp3">
+            </audio>
+        </div>
+
+        <script>
+            function showMessage() {
+                // Lời nhắn hiện ra khi bấm vào nút
+                swal({
+                    title: "Lời nhắn", // Tiêu đề của popup
+                    text: "Nhân ngày Quốc tế Nam giới 19/11, chúc bạn luôn sống như một dao động điều hòa: lúc thì chạm biên độ hạnh phúc cực đại, lúc thì cân bằng tuyệt đối giữa vui chơi và học tập, nhưng lúc nào cũng tràn đầy năng lượng! Hãy luôn giữ 'pha ban đầu' chuẩn chỉnh để không lệch sóng giữa những bài kiểm tra hóc búa, và nhớ gặp cộng hưởng với niềm vui trong từng khoảnh khắc của cuộc sống nhé!\n\nDù cuộc đời có là sóng ngang hay sóng dọc, mong bạn vẫn truyền đi nguồn năng lượng tích cực khắp mọi nơi, không bị phản xạ bởi những điều tiêu cực. Và đừng quên: 'dao động lý tưởng' của cuộc đời chính là sự cân bằng giữa đam mê và nghỉ ngơi!⚡✨", // Nội dung lời nhắn
+                    button: {
+                        text: "❤️️",
+                    },
+                });
+            }
+        </script>
+
+        <style>
+            /* Tổng quan */
+            body {
+                margin: 0;
+                font-family: 'Varela Round', sans-serif; /* Font chữ hỗ trợ tiếng Việt */
+                text-align: center;
+                background-color: #f0f0f0;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            /* Nút bấm */
+            .message-button {
+                padding: 10px 20px;
+                font-size: 1rem;
+                background-color: #ff5c8e;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin: 20px auto;
+            }
+
+            .message-button:hover {
+                background-color: #ff416c;
+            }
+
+            /* Responsive cho màn hình nhỏ hơn 768px */
+            @media (max-width: 768px) {
+                .message-button {
+                    font-size: 0.9rem;
+                    padding: 8px 18px;
+                }
+            }
+
+            /* Responsive cho màn hình nhỏ hơn 480px */
+            @media (max-width: 480px) {
+                .message-button {
+                    font-size: 0.8rem;
+                    padding: 6px 16px;
+                }
+            }
+        </style>
+    </body>
+</html>
